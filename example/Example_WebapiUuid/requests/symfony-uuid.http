@@ -1,0 +1,26 @@
+# @no-log
+GET https://demo.local/rest/V1/uuid-test/symfony-uuid
+Accept: application/json
+Content-Type: application/json
+
+###
+
+# @no-log
+GET https://demo.local/rest/V1/uuid-test/symfony-uuid/ff619853-92aa-447e-8690-e023cd9d8d74
+Accept: application/json
+Content-Type: application/json
+
+###
+
+# @no-log
+POST https://demo.local/rest/V1/uuid-test/symfony-uuid
+Accept: application/json
+Content-Type: application/json
+
+{
+    "foo": {
+        "id": {
+            "uuid": "ff619853-92aa-447e-8690-e023cd9d8d74"
+        }
+    }
+}

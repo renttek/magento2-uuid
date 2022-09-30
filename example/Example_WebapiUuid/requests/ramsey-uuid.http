@@ -1,0 +1,26 @@
+# @no-log
+GET https://demo.local/rest/V1/uuid-test/ramsey-uuid
+Accept: application/json
+Content-Type: application/json
+
+###
+
+# @no-log
+GET https://demo.local/rest/V1/uuid-test/ramsey-uuid/92b1a9a7-c78e-477f-9d78-ef5a1f5e741b
+Accept: application/json
+Content-Type: application/json
+
+###
+
+# @no-log
+POST https://demo.local/rest/V1/uuid-test/ramsey-uuid
+Accept: application/json
+Content-Type: application/json
+
+{
+    "foo": {
+        "id": {
+            "uuid": "92b1a9a7-c78e-477f-9d78-ef5a1f5e741b"
+        }
+    }
+}

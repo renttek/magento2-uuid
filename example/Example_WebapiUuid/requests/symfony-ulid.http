@@ -1,0 +1,26 @@
+# @no-log
+GET https://demo.local/rest/V1/uuid-test/symfony-ulid
+Accept: application/json
+Content-Type: application/json
+
+###
+
+# @no-log
+GET https://demo.local/rest/V1/uuid-test/symfony-ulid/01GE75ND0WH6VTC2TNSG4B5RSD
+Accept: application/json
+Content-Type: application/json
+
+###
+
+# @no-log
+POST https://demo.local/rest/V1/uuid-test/symfony-ulid
+Accept: application/json
+Content-Type: application/json
+
+{
+    "foo": {
+        "id": {
+            "ulid": "01GE75ND0WH6VTC2TNSG4B5RSD"
+        }
+    }
+}

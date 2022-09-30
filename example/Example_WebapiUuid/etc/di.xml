@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="Example\WebapiUuid\Api\Data\FooRamseyUuidInterface" type="Example\WebapiUuid\Model\FooRamseyUuid"/>
+    <preference for="Example\WebapiUuid\Api\Data\FooSymfonyUlidInterface" type="Example\WebapiUuid\Model\FooSymfonyUlid"/>
+    <preference for="Example\WebapiUuid\Api\Data\FooSymfonyUuidInterface" type="Example\WebapiUuid\Model\FooSymfonyUuid"/>
+    <preference for="Example\WebapiUuid\Api\FooRepositoryInterface" type="Example\WebapiUuid\Model\FooRepository"/>
+</config>
+
+
+
+

@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Webapi:etc/webapi.xsd">
+
+    <!-- Ramsey UUID -->
+    <route url="/V1/uuid-test/ramsey-uuid" method="GET">
+        <service class="Example\WebapiUuid\Api\FooRepositoryInterface" method="getRamseyUuid" />
+        <resources>
+            <resource ref="anonymous" />
+        </resources>
+    </route>
+    <route url="/V1/uuid-test/ramsey-uuid/:id" method="GET">
+        <service class="Example\WebapiUuid\Api\FooRepositoryInterface" method="getRamseyUuidById" />
+        <resources>
+            <resource ref="anonymous" />
+        </resources>
+    </route>
+    <route url="/V1/uuid-test/ramsey-uuid" method="POST">
+        <service class="Example\WebapiUuid\Api\FooRepositoryInterface" method="saveRamseyUuid" />
+        <resources>
+            <resource ref="anonymous" />
+        </resources>
+    </route>
+
+    <!-- Symfony UUID -->
+    <route url="/V1/uuid-test/symfony-uuid" method="GET">
+        <service class="Example\WebapiUuid\Api\FooRepositoryInterface" method="getSymfonyUuid" />
+        <resources>
+            <resource ref="anonymous" />
+        </resources>
+    </route>
+    <route url="/V1/uuid-test/symfony-uuid/:id" method="GET">
+        <service class="Example\WebapiUuid\Api\FooRepositoryInterface" method="getSymfonyUuidById" />
+        <resources>
+            <resource ref="anonymous" />
+        </resources>
+    </route>
+    <route url="/V1/uuid-test/symfony-uuid" method="POST">
+        <service class="Example\WebapiUuid\Api\FooRepositoryInterface" method="saveSymfonyUuid" />
+        <resources>
+            <resource ref="anonymous" />
+        </resources>
+    </route>
+
+    <!-- Ramsey ULID -->
+    <route url="/V1/uuid-test/symfony-ulid" method="GET">
+        <service class="Example\WebapiUuid\Api\FooRepositoryInterface" method="getSymfonyUlid" />
+        <resources>
+            <resource ref="anonymous" />
+        </resources>
+    </route>
+    <route url="/V1/uuid-test/symfony-ulid/:id" method="GET">
+        <service class="Example\WebapiUuid\Api\FooRepositoryInterface" method="getSymfonyUlidById" />
+        <resources>
+            <resource ref="anonymous" />
+        </resources>
+    </route>
+    <route url="/V1/uuid-test/symfony-ulid" method="POST">
+        <service class="Example\WebapiUuid\Api\FooRepositoryInterface" method="saveSymfonyUlid" />
+        <resources>
+            <resource ref="anonymous" />
+        </resources>
+    </route>
+</routes>
