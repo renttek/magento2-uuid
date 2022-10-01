@@ -32,9 +32,9 @@ class FooRepository implements FooRepositoryInterface
         return new FooRamseyUuid($this->ramseyUuidFactory->v4());
     }
 
-    public function getRamseyUuidById(string $id): FooRamseyUuidInterface
+    public function getRamseyUuidById(RamseyUuid\Uuid $id): FooRamseyUuidInterface
     {
-        return new FooRamseyUuid(new RamseyUuid\Uuid($id));
+        return new FooRamseyUuid($id);
     }
 
     public function saveRamseyUuid(FooRamseyUuidInterface $foo): RamseyUuid\Uuid
@@ -47,9 +47,9 @@ class FooRepository implements FooRepositoryInterface
         return new FooSymfonyUuid($this->symfonyUuidFactory->v4());
     }
 
-    public function getSymfonyUuidById(string $id): FooSymfonyUuidInterface
+    public function getSymfonyUuidById(SymfonyUid\Uuid $id): FooSymfonyUuidInterface
     {
-        return new FooSymfonyUuid(new SymfonyUid\Uuid($id));
+        return new FooSymfonyUuid($id);
     }
 
     public function saveSymfonyUuid(FooSymfonyUuidInterface $foo): SymfonyUid\Uuid
@@ -62,9 +62,9 @@ class FooRepository implements FooRepositoryInterface
         return new FooSymfonyUlid($this->symfonyUlidFactory->create());
     }
 
-    public function getSymfonyUlidById(string $id): FooSymfonyUlidInterface
+    public function getSymfonyUlidById(SymfonyUid\Ulid $id): FooSymfonyUlidInterface
     {
-        return new FooSymfonyUlid(new SymfonyUid\Ulid($id));
+        return new FooSymfonyUlid($id);
     }
 
     public function saveSymfonyUlid(FooSymfonyUlidInterface $foo): SymfonyUid\Ulid

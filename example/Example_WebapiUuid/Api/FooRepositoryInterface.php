@@ -14,11 +14,11 @@ interface FooRepositoryInterface
     public function getRamseyUuid(): \Example\WebapiUuid\Api\Data\FooRamseyUuidInterface;
 
     /**
-     * @param string $id
+     * @param \Renttek\Uuid\Api\RamseyUuid\Uuid $id
      *
      * @return \Example\WebapiUuid\Api\Data\FooRamseyUuidInterface
      */
-    public function getRamseyUuidById(string $id): \Example\WebapiUuid\Api\Data\FooRamseyUuidInterface;
+    public function getRamseyUuidById(\Renttek\Uuid\Api\RamseyUuid\Uuid $id): \Example\WebapiUuid\Api\Data\FooRamseyUuidInterface;
 
     /**
      * @param \Example\WebapiUuid\Api\Data\FooRamseyUuidInterface $foo
@@ -35,11 +35,11 @@ interface FooRepositoryInterface
     public function getSymfonyUuid(): \Example\WebapiUuid\Api\Data\FooSymfonyUuidInterface;
 
     /**
-     * @param string $id
+     * @param \Renttek\Uuid\Api\SymfonyUid\Uuid $id
      *
      * @return \Example\WebapiUuid\Api\Data\FooSymfonyUuidInterface
      */
-    public function getSymfonyUuidById(string $id): \Example\WebapiUuid\Api\Data\FooSymfonyUuidInterface;
+    public function getSymfonyUuidById(\Renttek\Uuid\Api\SymfonyUid\Uuid $id): \Example\WebapiUuid\Api\Data\FooSymfonyUuidInterface;
 
     /**
      * @param \Example\WebapiUuid\Api\Data\FooSymfonyUuidInterface $foo
@@ -56,11 +56,11 @@ interface FooRepositoryInterface
     public function getSymfonyUlid(): \Example\WebapiUuid\Api\Data\FooSymfonyUlidInterface;
 
     /**
-     * @param string $id
+     * @param \Renttek\Uuid\Api\SymfonyUid\Ulid $id
      *
      * @return \Example\WebapiUuid\Api\Data\FooSymfonyUlidInterface
      */
-    public function getSymfonyUlidById(string $id): \Example\WebapiUuid\Api\Data\FooSymfonyUlidInterface;
+    public function getSymfonyUlidById(\Renttek\Uuid\Api\SymfonyUid\Ulid $id): \Example\WebapiUuid\Api\Data\FooSymfonyUlidInterface;
 
     /**
      * @param \Example\WebapiUuid\Api\Data\FooSymfonyUlidInterface $foo
