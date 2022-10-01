@@ -10,13 +10,15 @@ use Renttek\Uuid\Api\SymfonyUid;
 
 class UidOutputArrayConverter
 {
-
+    /**
+     * @return string|mixed
+     */
     public function aroundBuildOutputDataArray(
         DataObjectProcessor $processor,
         callable $proceed,
         mixed $data,
         string $type
-    ) {
+    ): mixed {
         return $this->isUid($data)
             ? (string)$data
             : $proceed($data, $type);

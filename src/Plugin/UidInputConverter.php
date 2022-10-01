@@ -10,17 +10,20 @@ use Renttek\Uuid\Api\SymfonyUid;
 
 class UidInputConverter
 {
+    /**
+     * @return RamseyUuid\Uuid|SymfonyUid\Uuid|SymfonyUid\Ulid|mixed
+     */
     public function aroundConvertValue(
         ServiceInputProcessor $processor,
         callable $proceed,
         mixed $data,
         string $type
-    ) {
+    ): mixed {
         if (!is_string($data)) {
             return $proceed($data, $type);
         }
 
-        return match($type) {
+        return match ($type) {
             RamseyUuid\Uuid::class => new RamseyUuid\Uuid($data),
             SymfonyUid\Uuid::class => new SymfonyUid\Uuid($data),
             SymfonyUid\Ulid::class => new SymfonyUid\Ulid($data),
