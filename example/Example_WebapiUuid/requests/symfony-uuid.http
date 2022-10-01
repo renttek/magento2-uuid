@@ -19,8 +19,6 @@ Content-Type: application/json
 
 {
     "foo": {
-        "id": {
-            "uuid": "ff619853-92aa-447e-8690-e023cd9d8d74"
-        }
+        "id": "ff619853-92aa-447e-8690-e023cd9d8d74"
     }
 }

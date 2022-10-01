@@ -6,8 +6,9 @@ namespace Renttek\Uuid\Api\RamseyUuid;
 
 use Assert\Assertion;
 use Ramsey\Uuid\UuidInterface;
+use Stringable;
 
-class Uuid
+class Uuid implements Stringable
 {
     private UuidInterface $uuid;
 
@@ -30,5 +31,10 @@ class Uuid
     public function getUuid(): string
     {
         return $this->uuid->toString();
+    }
+
+    public function __toString(): string
+    {
+        return $this->getUuid();
     }
 }

@@ -19,8 +19,6 @@ Content-Type: application/json
 
 {
     "foo": {
-        "id": {
-            "ulid": "01GE75ND0WH6VTC2TNSG4B5RSD"
-        }
+        "id": "01GE75ND0WH6VTC2TNSG4B5RSD"
     }
 }

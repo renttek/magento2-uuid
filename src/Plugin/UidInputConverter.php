@@ -8,7 +8,7 @@ use Magento\Framework\Webapi\ServiceInputProcessor;
 use Renttek\Uuid\Api\RamseyUuid;
 use Renttek\Uuid\Api\SymfonyUid;
 
-class UidParameterConverter
+class UidInputConverter
 {
     public function aroundConvertValue(
         ServiceInputProcessor $processor,

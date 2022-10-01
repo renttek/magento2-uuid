@@ -5,20 +5,22 @@ declare(strict_types=1);
 namespace Renttek\Uuid\Api\SymfonyUid;
 
 use Assert\Assertion;
+use Stringable;
+use Symfony\Component\Uid\Uuid as SymfonyUuid;
 
-class Uuid
+class Uuid implements Stringable
 {
-    private \Symfony\Component\Uid\Uuid $uuid;
+    private SymfonyUuid $uuid;
 
     public function __construct(string $uuid)
     {
-        Assertion::classExists(\Symfony\Component\Uid\Uuid::class, 'symfony/uid is not installed');
-        Assertion::true(\Symfony\Component\Uid\Uuid::isValid($uuid), 'Invalid uuid given: ' . $uuid);
+        Assertion::classExists(SymfonyUuid::class, 'symfony/uid is not installed');
+        Assertion::true(SymfonyUuid::isValid($uuid), 'Invalid uuid given: ' . $uuid);
 
-        $this->uuid = \Symfony\Component\Uid\Uuid::fromString($uuid);
+        $this->uuid = SymfonyUuid::fromString($uuid);
     }
 
-    public static function fromUuid(\Symfony\Component\Uid\Uuid $uuid): self
+    public static function fromUuid(SymfonyUuid $uuid): self
     {
         return new self((string)$uuid);
     }
@@ -29,5 +31,10 @@ class Uuid
     public function getUuid(): string
     {
         return (string)$this->uuid;
+    }
+
+    public function __toString(): string
+    {
+        return $this->getUuid();
     }
 }
